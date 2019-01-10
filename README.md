@@ -1,5 +1,5 @@
 # general_selection_sort
-This C program takes an array of integers and sorts it with selection sorting algorithm with a customized order. 
+This C program takes an array of integers and sorts it with selection sorting algorithm with a customized order. Once ordered, the program checks whether the result is sorted and whether it's a permutation of the original array.
 
 To compile:
 gcc -Wall -Werror -Wextra -pedantic -std=c99 -c array_helpers.c sort.c
