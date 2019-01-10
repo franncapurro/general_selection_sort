@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 /*
     The elements of the array that's in the file located at 'filepath' are
@@ -45,4 +46,39 @@ void screen_array(int a[], unsigned int length) {
         printf("%i ", a[i]);
     }
     printf("\n");
+}
+
+/*
+Copies an array onto another.
+*/
+void array_copy(int copy[], int array[], unsigned int length) {
+    for (unsigned int i = 0; i < length; i++) {
+        copy[i] = array[i];
+    }
+}
+
+/*
+Counts how many times a specif value appears in an array.
+*/
+unsigned int count_value(int a[], unsigned int length, int value) {
+    unsigned int count = 0;
+    for(unsigned int i = 0; i < length; i++) {
+        if(a[i] == value) {
+            count++;
+        }
+    }
+    return(count);
+}
+
+/*
+Checks whether the array 'b' is a permutation of the array 'a'.
+*/
+bool its_permutation(int a[], int b[], unsigned int length) {
+    unsigned int i = 0;
+    bool ans = true;
+    while(i < length && ans) {
+        ans = count_value(a, length, a[i]) == count_value(b, length, b[i]);
+        i++;
+    }
+    return(ans);
 }

@@ -43,3 +43,18 @@ void g_selection_sort(int a[], unsigned int length) {
         swap(a, i, pos_to_swap);
     }
 }
+
+/*
+Checks if an array is sorted regarding the customized order.
+*/
+bool array_is_sorted(int a[], unsigned int length) {
+    unsigned int i = 0;
+    bool ans = true;
+    while(length > 0 && i < (length - 1) && ans) {
+        if(!goes_before(a[i], a[i+1])) {
+            ans = false;
+        }
+        i++;
+    }
+    return ans;
+}
