@@ -11,8 +11,14 @@ To execute:
 ./sorter /input/example-unsorted.in
 
 An array is loaded from a file with the following format:
+
+
 <array_length>
+
 <array_elem_1> <array_elem_2> <array_elem_3> ... <array_elem_N>
+
+
+Examples with file with this format are given in the input directory.
 
 If you want to change the order in which the selection sort sorts, you should
 modify the 'goes_before' function in the file 'sort.c'.
